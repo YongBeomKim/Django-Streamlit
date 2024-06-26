@@ -1,5 +1,80 @@
-# Byte-compiled / optimized / DLL files
+# Created by https://www.toptal.com/developers/gitignore/api/django
+# Edit at https://www.toptal.com/developers/gitignore?templates=django
+
+# User Customfiles
+dist.zip
+backup.xlsx
+
+## Hidden folder
+.*
+.venv
+!/.gitignore
+!/.market
+
+## Celery & Celery Beat ##
+celerybeat-schedule
+celerybeat-schedule.*
+
+### Django ###
+logs/
+gits/
+media/
+react_css/
+django/staticfiles
+**/staticfiles
+db.ini
+mariadb_dev.cnf
+mariadb.cnf
+
+#react/
+react/dist/
+**/staticfiles/
+
+# logs
+# Dockerfile
+settings.ini
+#*.whl
+# **/settings:
+# .env
+!/.momukji
+.momukji
+__pycache__
 __pycache__/
+migrations
+migrations/
+docs_cache
+htmlcov/
+*.pkl
+*.log
+*.pot
+*.pyc
+*.csv
+*.ipynb
+.ipynb_checkpoints/
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+yarn.lock
+
+### Django DEV Static
+#static/.babelrc
+#static/.env
+#static/*.json
+#static/*.js
+
+gits
+# dist
+node_modules/
+yarn.lock
+celerybeat-schedule.*
+#.editorconfig
+
+# If your build process includes running collectstatic, then you probably don't need or want to include staticfiles/
+# in your Git repository. Update and uncomment the following line accordingly.
+# <django-project-name>/staticfiles/
+
+### Django.Python Stack ###
+# Byte-compiled / optimized / DLL files
 *.py[cod]
 *$py.class
 
@@ -10,7 +85,7 @@ __pycache__/
 .Python
 build/
 develop-eggs/
-dist/
+# dist/
 downloads/
 eggs/
 .eggs/
@@ -38,6 +113,8 @@ pip-delete-this-directory.txt
 
 # Unit test / coverage reports
 htmlcov/
+venv/
+.vscode/
 .tox/
 .nox/
 .coverage
@@ -53,13 +130,8 @@ cover/
 
 # Translations
 *.mo
-*.pot
 
 # Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
 
 # Flask stuff:
 instance/
@@ -76,6 +148,7 @@ docs/_build/
 target/
 
 # Jupyter Notebook
+jupyter
 .ipynb_checkpoints
 
 # IPython
@@ -94,24 +167,7 @@ ipython_config.py
 #   install all needed dependencies.
 #Pipfile.lock
 
-# poetry
-#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
-#   This is especially recommended for binary packages to ensure reproducibility, and is more
-#   commonly ignored for libraries.
-#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
-#poetry.lock
-
-# pdm
-#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
-#pdm.lock
-#   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
-#   in version control.
-#   https://pdm.fming.dev/latest/usage/project/#working-with-version-control
-.pdm.toml
-.pdm-python
-.pdm-build/
-
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
 __pypackages__/
 
 # Celery stuff
@@ -122,7 +178,6 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
 .venv
 env/
 venv/
@@ -153,10 +208,3 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
-
-# PyCharm
-#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
-#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
-#  and can be added to the global gitignore or merged into this file.  For a more nuclear
-#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#.idea/
